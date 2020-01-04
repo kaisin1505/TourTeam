@@ -1,0 +1,14 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "mongoose",
+      "settings": {
+        "uri": "mongodb+srv://admin:aaaa1111@cluster0-8lhmv.mongodb.net/TourTeam?retryWrites=true&w=majority"
+      },
+      "options": {
+        "ssl": true 
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "locations",
+  "info": {
+    "name": "Location"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "longitude": {
+      "type": "biginteger"
+    },
+    "latitude": {
+      "type": "biginteger"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "location"
+    }
+  }
+}

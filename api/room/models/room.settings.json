@@ -1,0 +1,39 @@
+{
+  "connection": "default",
+  "collectionName": "rooms",
+  "info": {
+    "name": "Room"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "number_of_member": {
+      "type": "integer",
+      "default": 0
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "host": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "owner_of_rooms"
+    },
+    "members": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "rooms",
+      "dominant": true
+    },
+    "schedule": {
+      "model": "schedule",
+      "via": "rooms"
+    }
+  }
+}

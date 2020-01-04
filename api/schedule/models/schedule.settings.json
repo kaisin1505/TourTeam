@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "schedules",
+  "info": {
+    "name": "Schedule"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "start_date": {
+      "type": "datetime"
+    },
+    "end_date": {
+      "type": "datetime"
+    },
+    "rooms": {
+      "via": "schedule",
+      "collection": "room"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "schedule"
+    }
+  }
+}
